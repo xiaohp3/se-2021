@@ -1,6 +1,35 @@
-## STAGE1:Vi自学报告
+# STAGE1:Vi,Java,Ant,Junit的自学报告
 
 
+<!-- TOC -->
+
+- [Vi,Java,Ant,Junit的自学报告](#STAGE1:Vi,Java,Ant,Junit的自学报告vijavaantjunit的自学报告)
+  - [Vi](#vi)
+    - [Vi/Vim基本使用](#vivim的基本使用)
+    - [Vi/Vim中模式的切换：](#vivim中模式的切换)
+    - [Vim操作实例：](#Vim基本操作实例)
+  - [Java](#java)
+    - [Java的特性与优势](#java的特性与优势)
+    - [Linux下Java8环境配置](#linux下java8环境配置)
+    - [HelloWorld](#helloworld)
+      - [使用vim运行：](#使用vim运行)
+      - [Java GUI](#java-gui)
+      - [Java小程序——简单计算器](#java小程序简单计算器)
+  - [Ant](#ant)
+    - [简介](#简介-2)
+    - [配置](#配置)
+    - [Ant入门](#ant入门)
+    - [Ant之project、target、property](#ant之projecttargetproperty)
+    - [HelloWorld项目的ant编写](#helloworld项目的ant编写)
+  - [Junit](#junit)
+    - [简介](#简介-3)
+    - [基础使用](#基础使用)
+    - [原则](#原则)
+    - [HelloWorld项目的Junit测试](#helloworld项目的junit测试)
+
+<!-- /TOC -->
+
+## Vi
 
 ### Vi/Vim的基本使用
 
@@ -21,9 +50,9 @@ vi/vim 共分为三种模式，分别是**命令模式（Command mode）**，**�
 
 > 按ESC键可随时退出底线命令模式。
 
-### Vi/Vim中模式的切换总结：
+### Vi/Vim中模式的切换：
 
-三个模式：命令模式、输入模式、底线命令模式
+vi/vim的三个模式：命令模式、输入模式、底线命令模式
 
 - 进入命令模式：使用vi filename 或vim filename
 - 命令模式进入输入模式：输入i、a、o。
@@ -32,21 +61,82 @@ vi/vim 共分为三种模式，分别是**命令模式（Command mode）**，**�
 - 底线命令模式返回命令模式：ESC键
 - 退出命令模式：输入“：”进入底线命令模式，输入wq回车，保存并离开。
 
-### 操作实例：
+### Vim基本操作实例：
 
-创建一个a.txt文件，然后使用vim编辑器进行编辑，输入i进入输入模式。
+1. 创建一个a.txt文件，然后使用vim编辑器进行编辑，输入i进入输入模式。
 
 ![](imgs/img1.png)
 
-输入hello, world
+2. 输入hello, world及学号姓名
 
 ![](imgs/img2.png)
 
-输入完后，esc加：进入底层命令模式，然后输入wq保存退出。
+3. 输入完后，esc加：进入底层命令模式，然后输入wq保存退出。
 
 ![](imgs/img3.png)
 
-此时文件已经生成并成功保存，最后使用cat查看文件内容。
+4. 此时文件已经生成并成功保存，最后使用cat查看文件内容。
 
 ![](imgs/img4.png)
+
+5. 成功输出
+ 
+
+
+## Java
+### Java的特性与优势
+
+Java语言使用简单、是一个面向对象、分布式应用并且安全、体系结构中立并且可移植的高级语言，最重要，Java是一个动态语言。因其卓越的通用性、高效性、平台移植性和安全性等特性，Java自1995年问世以来，迅速成为全球范围内应用范围最广的开发语言。即使历经十余年发展，它仍然在行业内保持着“常青树”的地位。Java 语言是健壮的、安全的、高性能的。且具有可移植、体系结构中立、多线程等特性。
+
+### Linux下Java8环境配置
+
+我们没有使用云桌面，选择在本地环境配置。
+1. 去官网下载Java 8
+
+![](imgs/img5.png)
+
+2. 把.gz文件放到目标文件夹
+
+```shell
+sudo tar zxvf ./jdk-8u301-linux-x64.tar.gz
+```
+解压
+
+![](imgs/img6.png)
+
+3. java环境变量的配置：
+  - JAVA_HOME：指向jdk安装目录，该目录下有bin、lib目录。
+  - PATH：系统原有的变量，指向命令搜索路径，在shell下执行命令时，它会到PATH变量制定的路径中查找相应的命令。
+  - CLASSPATH：指向类搜索路径。通过该变量来寻找并使用类。
+
+具体配置需要在bashrc文件中加入如下代码（根据实际进行修改：版本等信息），并更新配置（使用source命令）：
+
+![](imgs/img7.png)
+
+检查Java版本
+
+![](imgs/img8.png)
+
+安装成功。
+
+### HelloWorld
+
+#### 使用vim运行：
+使用命令行创建源代码
+
+编写程序
+
+![](imgs/img9.png)
+
+编译 运行
+
+![](imgs/img10.png)
+
+
+
+
+#### Java GUI
+
+#### Java小程序——简单计算器
+
 
