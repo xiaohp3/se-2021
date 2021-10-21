@@ -139,4 +139,27 @@ sudo tar zxvf ./jdk-8u301-linux-x64.tar.gz
 
 #### Java小程序——简单计算器
 
+## Ant
+
+### 简介
+
+- Ant是Java的生成工具，是Apache的核心项目；
+- Ant类似于Unix中的Make工具，都是用来编译、生成；
+- Ant是跨平台的，而Make不能；
+- Ant的主要目的就是把你想做的事情自动化，不用你手动一步一步做，因为里面内置了javac、java、创建目录、复制文件等功能，所以可以直接点击Ant文件，即可编译生成你的项目。
+
+### 配置
+
+- 在Ant安装之前需要安装好JDK，并配置好JAVA_HOME；
+- 新建环境变量ANT_HOME：值为ANT的主目录；
+- 在path中配置%ANT_HOME%/bin；
+- 配置完成之后，打开命令行，输入ant，当出现“Buildfile: build.xml does not exist! Build failed”时说明配置完成；
+
+先去下载ant1.7.0
+
+![](imgs/img11.png)
+
+解压到Linux里的路径下
+
+![](imgs/img12.png)
 
