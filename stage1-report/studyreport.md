@@ -155,3 +155,11 @@ sudo tar zxvf ./jdk-8u301-linux-x64.tar.gz
 
 ![](imgs/img12.png)
 
+进入profile文件配置一哈环境变量
+
+![](imgs/img13.png)
+
+用source命令更新一下
+控制台输入ant，可以看到已经安装成功了
+
+![](imgs/img14.png)
