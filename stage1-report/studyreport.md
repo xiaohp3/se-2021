@@ -12,12 +12,9 @@
     - [Java的特性与优势](#java的特性与优势)
     - [Linux下Java8环境配置](#linux下java8环境配置)
     - [HelloWorld](#helloworld)
-      - [使用vim运行：](#使用vim运行)
-      - [Java GUI](#java-gui)
-      - [Java小程序——简单计算器](#java小程序简单计算器)
   - [Ant](#ant)
-    - [简介](#简介-2)
-    - [配置](#配置)
+    - [简介](#简介)
+    - [配置过程](#配置过程)
     - [Ant入门](#ant入门)
     - [Ant之project、target、property](#ant之projecttargetproperty)
     - [HelloWorld项目的ant编写](#helloworld项目的ant编写)
@@ -121,7 +118,6 @@ sudo tar zxvf ./jdk-8u301-linux-x64.tar.gz
 
 ### HelloWorld
 
-#### 使用vim运行：
 使用命令行创建源代码
 
 编写程序
@@ -132,12 +128,8 @@ sudo tar zxvf ./jdk-8u301-linux-x64.tar.gz
 
 ![](imgs/img10.png)
 
+可以知道安装和环境变量配置成功了
 
-
-
-#### Java GUI
-
-#### Java小程序——简单计算器
 
 ## Ant
 
@@ -148,13 +140,13 @@ sudo tar zxvf ./jdk-8u301-linux-x64.tar.gz
 - Ant是跨平台的，而Make不能；
 - Ant的主要目的就是把你想做的事情自动化，不用你手动一步一步做，因为里面内置了javac、java、创建目录、复制文件等功能，所以可以直接点击Ant文件，即可编译生成你的项目。
 
-### 配置
 
 - 在Ant安装之前需要安装好JDK，并配置好JAVA_HOME；
 - 新建环境变量ANT_HOME：值为ANT的主目录；
 - 在path中配置%ANT_HOME%/bin；
 - 配置完成之后，打开命令行，输入ant，当出现“Buildfile: build.xml does not exist! Build failed”时说明配置完成；
 
+### 配置过程
 先去下载ant1.7.0
 
 ![](imgs/img11.png)
