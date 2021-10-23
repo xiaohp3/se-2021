@@ -163,3 +163,75 @@ sudo tar zxvf ./jdk-8u301-linux-x64.tar.gz
 控制台输入ant，可以看到已经安装成功了
 
 ![](imgs/img14.png)
+
+### ant的使用
+
+ant的默认生成文件为build.xml；
+
+输入ant后，ant会在当前目录下搜索是否有build.xml，如果有，则执行；
+
+### HelloWorld项目的ant编写
+
+```
+<?xml version="1.0" ?> 
+<project name ="HelloWorld" default="run" basedir="."> 
+    <target name="clean"> 
+        <delete dir="${basedir}/build"/> 
+    </target> 
+    <target name="compile"  depends ="clean"> 
+        <mkdir dir ="${basedir}/build/classes"/> 
+        <javac srcdir ="${basedir}/src" destdir ="${basedir}/build/classes"/> 
+    </target> 
+     <target name="run"  depends ="compile"> 
+        <java classname ="HelloWorld"> 
+            <classpath> 
+               <pathelement path="${basedir}/build/classes"/> 
+            </classpath> 
+        </java> 
+    </target> 
+</project> 
+
+```
+
+![](imgs/img15.png)
+
+## Java计算器
+
+整体实现思路与原理：
+1. 需要用到JAVA GUI的JFrame、JLabel、JTextField、JButton等组件
+2. 界面的布局需要用到GridLayout布局。
+3. 给button添加事件处理，使用addActionListener
+4. 计算器的运行逻辑，输入两个数，选择运算规则（加减乘除），计算结果。
+
+实现逻辑见代码：
+
+
+## Junit
+
+### 简介
+
+JUnit是一个Java语言的单元测试框架。它由Kent Beck和Erich Gamma建立，逐渐成为源于Kent Beck的sUnit的xUnit家族中最为成功的一个。 JUnit有它自己的JUnit扩展生态圈。多数Java的开发环境都已经集成了JUnit作为单元测试的工具。 
+
+JUnit是由 Erich Gamma 和 Kent Beck 编写的一个回归测试框架（regression testing framework）。Junit测试是程序员测试，即所谓白盒测试，因为程序员知道被测试的软件如何（How）完成功能和完成什么样（What）的功能。Junit是一套框架，继承TestCase类，就可以用Junit进行自动测试了。
+
+### 基础使用
+
+1. @Test: 测试方法
+   1. (expected=XXException.class)如果程序的异常和XXException.class一样，则测试通过
+   2. (timeout=100)如果程序的执行能在100毫秒之内完成，则测试通过
+2. @Ignore: 被忽略的测试方法：加上之后，暂时不运行此段代码
+3. @Before: 每一个测试方法之前运行
+4. @After: 每一个测试方法之后运行
+5. @BeforeClass: 方法必须必须要是静态方法（static 声明），所有测试开始之前运行，注意区分before，是所有测试方法
+6. @AfterClass: 方法必须要是静态方法（static 声明），所有测试结束之后运行，注意区分 @After
+
+### 原则
+
+- 测试方法上必须使用@Test进行修饰
+- 测试方法必须使用public void 进行修饰，不能带任何的参数
+- 建一个源代码目录来存放我们的测试代码，即将测试代码和项目业务代码分开
+- 测试类所在的包名应该和被测试类所在的包名保持一致
+- 测试单元中的每个方法必须可以独立测试，测试方法间不能有任何的依赖
+- 测试类使用Test作为类名的后缀（不是必须）
+- 测试方法使用test作为方法名的前缀（不是必须）
+
