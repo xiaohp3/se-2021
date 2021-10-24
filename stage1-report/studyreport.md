@@ -18,6 +18,7 @@
     - [Ant入门](#ant入门)
     - [Ant之project、target、property](#ant之projecttargetproperty)
     - [HelloWorld项目的ant编写](#helloworld项目的ant编写)
+  - [Java计算器](#java计算器)
   - [Junit](#junit)
     - [简介](#简介-3)
     - [基础使用](#基础使用)
@@ -395,3 +396,6 @@ JUnit是由 Erich Gamma 和 Kent Beck 编写的一个回归测试框架（regres
 - 测试类使用Test作为类名的后缀（不是必须）
 - 测试方法使用test作为方法名的前缀（不是必须）
 
+### helloworld项目的junit测试实例
+
+![](imgs/img22.png)
