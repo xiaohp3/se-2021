@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
+
 public class Calculator extends JFrame implements ActionListener {
     // data variable
     private double num1;     // the first number to do compute
